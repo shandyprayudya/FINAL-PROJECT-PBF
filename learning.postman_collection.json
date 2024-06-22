@@ -1,0 +1,709 @@
+{
+	"info": {
+		"_postman_id": "e9641430-d6ab-4be4-9f11-b7a17785e91c",
+		"name": "learning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35043543"
+	},
+	"item": [
+		{
+			"name": "course-categories",
+			"item": [
+				{
+					"name": "read",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zenlearning.site/api/course-categories",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"course-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_name\": \"sistem \",\r\n    \"category_status\": true,\r\n    \"category_image\": null\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zenlearning.site/api/course-categories",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"course-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_name\": \"teknik info\",\r\n    \"category_status\": false,\r\n    \"category_image\": null\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zenlearning.site/api/course-categories/1",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"course-categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://zenlearning.site/api/course-categories/1",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"course-categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "course",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"perumusan\",\r\n    \"course_category_id\": \"1\",\r\n    \"teacher_id\": \"3\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zenlearning.site/api/courses",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://zenlearning.site/api/courses",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"pengen\",\r\n    \"course_category_id\": 1,\r\n    \"teacher_id\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zenlearning.site/api/courses/1",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"courses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://zenlearning.site/api/courses/1",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"courses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Agoy\",\r\n    \"contact\": \"1234\",\r\n    \"email\": \"yafi@ex.com\",\r\n    \"image\": null,\r\n    \"status\": true,\r\n    \"password\": \"password123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zenlearning.site/api/students",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://zenlearning.site/api/students",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Agoy\",\r\n    \"contact\": \"1234\",\r\n    \"email\": \"aguy@ex.com\",\r\n    \"image\": null,\r\n    \"status\": true,\r\n    \"password\": \"password111\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zenlearning.site/api/students/1",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"students",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://zenlearning.site/api/students/1",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"students",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "teacher",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ojo\",\r\n    \"contact\": \"6473\",\r\n    \"email\": \"rio@example.com\",\r\n    \"role_id\": 1,\r\n    \"image\": \"null\",\r\n    \"status\": true,\r\n    \"password\": \"rahasia\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zenlearning.site/api/teachers",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://zenlearning.site/api/teachers",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ojo\",\r\n    \"contact\": \"24231224\",\r\n    \"email\": \"faebuur@example.com\",\r\n    \"role_id\": 1,\r\n    \"image\": \"null\",\r\n    \"status\": true,\r\n    \"password\": \"rahasa\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zenlearning.site/api/teachers/1",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"teachers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zenlearning.site/api/teachers/1",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"teachers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "role",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"student_id\" : \"3\",\r\n    \"course_id\" : \"4\",\r\n    \"enrollment_date\" : null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zenlearning.site/api/enrollments",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"enrollments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://zenlearning.site/api/roles",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"agak beb\",\r\n    \"identity\": \"sepedaku\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zenlearning.site/api/roles/4",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"roles",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/roles/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"roles",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "enrollment",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"student_id\" : \"4\",\r\n    \"course_id\" : \"3\",\r\n    \"enrollment_date\" : null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zenlearning.site/api/enrollments",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"enrollments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://zenlearning.site/api/enrollments",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"enrollments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"student_id\" : \"4\",\r\n\"course_id\" : \"4\",\r\n\"enrollment_date\" : null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zenlearning.site/api/enrollments/1",
+							"protocol": "https",
+							"host": [
+								"zenlearning",
+								"site"
+							],
+							"path": [
+								"api",
+								"enrollments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"juje\",\r\n    \"contact\" : \"123456\",\r\n    \"email\":\"kelompok11@gmail\",\r\n    \"password\": \"passsword\",\r\n    \"role_id\": \"1\",\r\n    \"teacher_id\": \"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://zenlearning.site/api/register",
+					"protocol": "https",
+					"host": [
+						"zenlearning",
+						"site"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"kelompok11@gmail\",\r\n    \"password\":\"passsword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://zenlearning.site/api/login",
+					"protocol": "https",
+					"host": [
+						"zenlearning",
+						"site"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
